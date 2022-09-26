@@ -9,15 +9,14 @@ class SecondPage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          leading: ElevatedButton(
+              onPressed: (){
+                Navigator.pop(context);
+              },
+              child: Icon(Icons.navigate_before)),
           centerTitle: true,
+
           title: Text('Second page'),
-          actions: [
-            ElevatedButton(
-                onPressed: (){
-                  Navigator.pop(context);
-                },
-                child: Icon(Icons.navigate_before))
-          ],
         ),
           body: Row(
             mainAxisAlignment: MainAxisAlignment.center,
